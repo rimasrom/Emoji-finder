@@ -15,9 +15,12 @@ const App = () => {
   function emojiHandler(input){
     const userInput = input.target.value
      
-    const emoji = emojiDictionary[userInput]
+    var emoji = emojiDictionary[userInput]
 
-    setEmoji(emoji)
+    if(emoji === undefined){
+      emoji = "sorry,we dont have this in our database"
+    }
+    setEmoji(emoji)   
   }
 
   return (
