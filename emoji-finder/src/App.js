@@ -38,7 +38,12 @@ const App = () => {
         <h3>{emoji}</h3>
         </div>
 
-      
+        <div className="list">
+          <li>😊</li>
+          <li>❤</li>
+          <li>😉</li>
+          <li>😒</li>
+        </div>
     </div>
   )
 }
