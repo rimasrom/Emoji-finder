@@ -8,6 +8,8 @@ const emojiDictionary = {
   "😒":"unamused"
 }
 
+const displayedEmoji = Object.keys(emojiDictionary)
+
 const App = () => {
 
   const [emoji,setEmoji] = useState("")
@@ -23,11 +25,16 @@ const App = () => {
     setEmoji(emoji)   
   }
 
+  function onclickHandler(input){
+    var emoji = emojiDictionary[input]
+    setEmoji(emoji)
+  }
+
   return (
     <div className="container-main">
       
         <div className="header">
-        <h1>What emoji it is</h1>
+        <h1>What emoji it is ?</h1>
         </div>
 
         <div className="input">
@@ -35,14 +42,13 @@ const App = () => {
         </div>
 
         <div className="output">
-        <h3>{emoji}</h3>
+        <h2>{emoji}</h2>
         </div>
 
-        <div className="list">
-          <li>😊</li>
-          <li>❤</li>
-          <li>😉</li>
-          <li>😒</li>
+        <div className="list" >
+          {displayedEmoji.map(emoji=>{
+            return <li onClick={()=>onclickHandler(emoji)}>{emoji}</li>
+          })}
         </div>
     </div>
   )

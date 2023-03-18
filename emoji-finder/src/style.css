@@ -21,12 +21,20 @@ input{
 
 .list{
     display: flex;
-    align-items: center;
     justify-content: center;
-    list-style: none;
+    font-size: 4rem;
 }
 
 li{
+    list-style: none;
+    padding: 1rem;
+}
+
+.list :hover{
+    cursor:pointer;
+}
+
+h2{
     padding: 1rem;
 }
 
