@@ -17,7 +17,6 @@ const App = () => {
      
     const emoji = emojiDictionary[userInput]
 
-
     setEmoji(emoji)
   }
 
