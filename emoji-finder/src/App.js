@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
 
+const emojiDictionary = {
+  "😊":"smilng face",
+  "❤":"heart",
+  "😉":"wink",
+  "😒":"unamused"
+}
+
 const App = () => {
+
+  const [emoji,setEmoji] = useState("")
+
+  function emojiHandler(input){
+    const userInput = input.target.value
+     
+    const emoji = emojiDictionary[userInput]
+
+
+    setEmoji(emoji)
+  }
+
   return (
     <div className="container-main">
       
@@ -10,11 +29,11 @@ const App = () => {
         </div>
 
         <div className="input">
-          <input type="text" />
+          <input onChange={emojiHandler}/>
         </div>
 
         <div className="output">
-        <h3>The result will be displayed here</h3>
+        <h3>{emoji}</h3>
         </div>
 
       
