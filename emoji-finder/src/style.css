@@ -18,3 +18,15 @@ input{
     padding: 1rem;
     border-radius: 0.5rem;
 }
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+li{
+    padding: 1rem;
+}
+
